@@ -20,10 +20,10 @@ int* shuffleDeck() {
                         .count();
 
     // declare pointer to deck array
-    int* ptr = deck;
+    int* pDeck = deck;
 
     // shuffle deck
-    shuffle(ptr, ptr+52, default_random_engine(seed));
+    shuffle(pDeck, pDeck+52, default_random_engine(seed));
 
     // convert to reference numbers
     for (int i = 0 ; i < 52 ; i++) {

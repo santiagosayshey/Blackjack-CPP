@@ -8,7 +8,7 @@ extern int *handDraw(int* deck, int choice);
 extern void boardState(int *deck);
 extern int playerLoop(int* hand); 
 extern int dealerLoop(int* hand);
-extern void winState(int playerScore, int dealerScore);
+extern int *winState(int playerScore, int dealerScore);
 extern bool choiceConvert();
 
 int main() {
@@ -32,14 +32,13 @@ int main() {
         hand = handDraw(deck, choice);
         int playerScore = playerLoop(hand);
 
-
         // dealer loop
         choice = 2;
         hand = handDraw(deck, choice);
         int dealerScore = dealerLoop(hand);
 
         // win state
-        winState(playerScore, dealerScore);
+        int *stats = winState(playerScore, dealerScore);
 
         cout << "Do you want to keep playing? ";
         on = choiceConvert();
