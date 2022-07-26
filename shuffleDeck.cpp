@@ -21,6 +21,7 @@ int* shuffleDeck() {
     unsigned seed = chrono::system_clock::now()
                         .time_since_epoch()
                         .count();
+                        
     // shuffle deck
     shuffle(ptr, ptr+52, default_random_engine(seed));
 
