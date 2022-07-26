@@ -11,14 +11,14 @@ extern int dealerLoop(int* hand);
 extern void winState(int playerScore, int dealerScore);
 
 int main() {
-
-
-
     int choice;
     int* hand;
     bool on = true;
 
     while (on == true) {
+
+        // clear the terminal
+        system("clear");
 
         // shuffle the deck
         int *deck = shuffleDeck();
