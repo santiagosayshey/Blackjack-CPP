@@ -1,7 +1,8 @@
 // this function creates a randomly shuffled 52 card deck array
 
 #include <algorithm>
-#include <iostream>
+#include <random>
+#include <chrono>
 
 using namespace std;
 
@@ -16,9 +17,12 @@ int* shuffleDeck() {
     for (int i = 0; i < 52; i++) {
         deck[i]=i+1;
     }
-
+    // get a time-based seed
+    unsigned seed = chrono::system_clock::now()
+                        .time_since_epoch()
+                        .count();
     // shuffle deck
-    random_shuffle(ptr, ptr+52);
+    shuffle(ptr, ptr+52, default_random_engine(seed));
 
     return deck;
 }
