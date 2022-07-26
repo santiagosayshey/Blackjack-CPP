@@ -4,11 +4,17 @@
 
 using namespace std;
 
-int scorefinder(int i, int* hand, int score) {
+int scorefinder(int i, int* hand, int score, int count) {
 
     if (hand[i] == 1) {
         cout << "Ace" << " ";
-        score += 1;
+        if (score+11 < 22) {
+            score += 11;
+        }
+        else if (score+11 > 21) {
+            score += 1;
+        }
+        
     }
     else if (hand[i] == 11) {
         cout << "King" << " ";

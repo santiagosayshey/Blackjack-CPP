@@ -48,3 +48,11 @@ int main() {
     return 0;
 
 }
+
+// aces count as 11 iff score + 11 < 22
+
+// player always draws first and therefore loses if both player and dealer bust
+
+/* player can only see the dealer's second card initially.
+   once they have set their hand the dealer's hand is 
+   revealed in full */

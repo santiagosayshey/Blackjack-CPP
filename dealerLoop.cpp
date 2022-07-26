@@ -5,7 +5,7 @@
 
 using namespace std;
 
-extern int scorefinder(int i, int* hand, int score);
+extern int scorefinder(int i, int* hand, int score, int count);
 
 int dealerLoop(int* hand) {
 
@@ -14,14 +14,14 @@ int dealerLoop(int* hand) {
 
     cout << "Dealer drew: ";
         for (i=0 ; i<2 ; i++) {
-            score = scorefinder(i, hand, score);
+            score = scorefinder(i, hand, score, count);
         }
         count=2;
 
     while (score <= 17) {
 
         for (i=count ; i<count+1 ; i++) {
-            score = scorefinder(i, hand, score);
+            score = scorefinder(i, hand, score, count);
         }
         count += 1;
 
