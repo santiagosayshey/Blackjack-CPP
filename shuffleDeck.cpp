@@ -9,9 +9,6 @@ using namespace std;
 int* shuffleDeck() {
     // initialise unshuffled deck
     static int deck[51];
-    
-    // declare pointer to deck array
-    int* ptr = deck;
 
     // fill array
     for (int i = 0; i < 52; i++) {
@@ -21,6 +18,9 @@ int* shuffleDeck() {
     unsigned seed = chrono::system_clock::now()
                         .time_since_epoch()
                         .count();
+
+    // declare pointer to deck array
+    int* ptr = deck;
 
     // shuffle deck
     shuffle(ptr, ptr+52, default_random_engine(seed));

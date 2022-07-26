@@ -1,3 +1,5 @@
+// this function allocates cards to a hand from a shuffled deck
+
 #include <iostream>
 #include <cmath>
 

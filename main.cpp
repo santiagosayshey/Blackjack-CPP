@@ -5,16 +5,24 @@ using namespace std;
 
 extern int *shuffleDeck();
 extern int *handDraw(int* deck, int choice);
+extern int cardLoop(int* hand);
 
 int main() {
 
+    int choice;
+    int *hand;
+
+    // shuffle the deck
     int *deck = shuffleDeck();
 
-    int choice = 1; // player
-    int *playerHand = handDraw(deck, choice);
+    // player component
+    choice = 1; 
+    hand = handDraw(deck, choice);
+    int playerCount = cardLoop(hand);
 
-    choice = 2; // dealer
-    int *dealerHand = handDraw(deck, choice);
+    // dealer component
+    choice = 2;
+    hand = handDraw(deck, choice);
 
     return 0;
 
