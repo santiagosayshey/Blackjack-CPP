@@ -1,4 +1,5 @@
-// this function collates dealer functions
+// this function scores the dealer's hand
+
 
 #include <iostream>
 
@@ -6,9 +7,16 @@ using namespace std;
 
 extern int scorefinder(int i, int* hand, int score);
 
-int dealerComponent(int* hand) {
+int dealerLoop(int* hand) {
+
+    int score=0, count=0, i;
     bool add;
-    int score, i, count;
+
+    cout << "Dealer drew: ";
+        for (i=0 ; i<2 ; i++) {
+            score = scorefinder(i, hand, score);
+        }
+        count=2;
 
     while (score <= 17) {
 
