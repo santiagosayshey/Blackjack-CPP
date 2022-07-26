@@ -1,0 +1,1 @@
+can we get around dynamic hand arrays by pre drawing each hand and only using what is nessecary?
