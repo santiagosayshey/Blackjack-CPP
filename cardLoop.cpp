@@ -20,11 +20,13 @@ int cardLoop(int* hand) {
 
     cout << "Would you like to hit? " << endl;
     cin >> add;
-    
+
     while (add == true && score <= 21) {
 
         cout << "You Drew: " << endl;
-        score = scorefinder(i, hand, score);
+        for (i=count ; i<count+1 ; i++) {
+            score = scorefinder(i, hand, score);
+        }
         count += 1;
 
         cout << endl << "Score: " << score << endl;
