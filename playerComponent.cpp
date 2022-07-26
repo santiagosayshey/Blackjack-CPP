@@ -11,19 +11,19 @@ int playerComponent(int* hand) {
     int score = 0, count = 0, i;
     bool add;
 
-    cout << "You Drew: " << endl;
+    cout << "You Drew: ";
     for (i=0 ; i<2 ; i++) {
         score = scorefinder(i, hand, score);
     }
     count=2;
     cout << endl << "Score: " << score << endl;
 
-    cout << "Would you like to hit? " << endl;
+    cout << "Would you like to hit? ";
     cin >> add;
 
     while (add == true && score <= 21) {
 
-        cout << "You Drew: " << endl;
+        cout << "You Drew: ";
         for (i=count ; i<count+1 ; i++) {
             score = scorefinder(i, hand, score);
         }
