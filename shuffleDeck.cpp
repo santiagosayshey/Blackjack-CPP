@@ -21,9 +21,25 @@ int* shuffleDeck() {
     unsigned seed = chrono::system_clock::now()
                         .time_since_epoch()
                         .count();
-                        
+
     // shuffle deck
     shuffle(ptr, ptr+52, default_random_engine(seed));
 
+    // convert to reference numbers
+    for (int i = 0 ; i < 52 ; i++) {
+        if (deck[i] > 13 && deck[i] < 27) {
+            deck[i]=deck[i]-13;
+        }
+        else if (deck[i] > 26 && deck[i] < 40) {
+            deck[i]=deck[i]-26;
+        }
+        else if (deck[i] > 39) {
+            deck[i]=deck[i]-39;
+        }
+    }
+
     return deck;
 }
+
+
+    
