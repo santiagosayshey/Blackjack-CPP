@@ -7,19 +7,9 @@ using namespace std;
 extern int scorefinder(int i, int* hand, int score);
 
 int playerComponent(int* hand) {
-
-    int score = 0, count = 0, i;
     bool add;
-
-    cout << "You Drew: ";
-    for (i=0 ; i<2 ; i++) {
-        score = scorefinder(i, hand, score);
-    }
-    count=2;
-    cout << endl << "Score: " << score << endl;
-
-    cout << "Would you like to hit? ";
-    cin >> add;
+    int score, i, count;
+    
 
     while (add == true && score <= 21) {
 

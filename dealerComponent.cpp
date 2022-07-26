@@ -7,16 +7,8 @@ using namespace std;
 extern int scorefinder(int i, int* hand, int score);
 
 int dealerComponent(int* hand) {
-
-    int score = 0, count = 0, i;
     bool add;
-
-    cout << "Dealer drew: ";
-
-    for (i=0 ; i<2 ; i++) {
-        score = scorefinder(i, hand, score);
-    }
-    count=2;
+    int score, i, count;
 
     while (score <= 17) {
 
