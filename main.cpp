@@ -15,6 +15,7 @@ int main() {
     int choice;
     int* hand;
     bool on = true;
+    static int win=0, loss=0, tie=0;
 
     while (on == true) {
 
@@ -40,13 +41,12 @@ int main() {
         // win state
         int *stats = winState(playerScore, dealerScore);
 
-        cout << "Do you want to keep playing? ";
+        cout << "Do you want to keep playing? WIN";
         on = choiceConvert();
 
     }
-
+     
     return 0;
-
 }
 
 // aces count as 11 iff score + 11 < 22

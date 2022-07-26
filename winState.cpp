@@ -6,7 +6,7 @@ using namespace std;
 
 void winState(int playerScore, int dealerScore) {
 
-    static int win=0, loss=0, tie=0;
+    static int win, loss, tie;
 
     if (playerScore > 21) { 
         cout << "Bust! The Dealer Wins!" << endl;
