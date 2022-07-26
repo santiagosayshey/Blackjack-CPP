@@ -3,7 +3,7 @@
 
 using namespace std;
 
-extern int scorefinder(int i, int* hand);
+extern int scorefinder(int i, int* hand, int score);
 
 int cardLoop(int* hand) {
 
@@ -15,26 +15,7 @@ int cardLoop(int* hand) {
 
     cout << "You Drew: " << endl;
     for (i=0 ; i<2 ; i++) {
-        if (hand[i] == 1) {
-            cout << "Ace" << " ";
-            score += 1;
-        }
-        else if (hand[i] == 11) {
-            cout << "King" << " ";
-            score += 10;
-        }
-        else if (hand[i] == 12) {
-            cout << "Queen" << " ";
-            score += 10;
-        }
-        else if (hand[i] == 13) {
-            cout << "Jack" << " ";
-            score += 10;
-        }
-        else {
-            cout << hand[i] << " ";
-            score += hand[i];
-        }
+        score = scorefinder(i, hand, score);
     }
     cout << endl;
     cout << "Score: " << score << endl;
@@ -45,28 +26,7 @@ int cardLoop(int* hand) {
     count=2;
     while (add == true && score <= 21) {
         cout << "You Drew: " << endl;
-        for (i=count ; i<count+1 ; i++) {
-            if (hand[i] == 1) {
-                cout << "Ace" << " ";
-                score += 1;
-            }
-            else if (hand[i] == 11) {
-                cout << "King" << " ";
-                score += 10;
-            }
-            else if (hand[i] == 12) {
-                cout << "Queen" << " ";
-                score += 10;
-            }
-            else if (hand[i] == 13) {
-                cout << "Jack" << " ";
-                score += 10;
-            }
-            else {
-                cout << hand[i] << " ";
-                score += hand[i];
-            }
-        }
+        score = scorefinder(i, hand, score);
         count += 1;
 
         cout << endl;
