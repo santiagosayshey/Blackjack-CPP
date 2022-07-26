@@ -5,6 +5,7 @@
 using namespace std;
 
 extern int scorefinder(int i, int* hand, int score, int count);
+extern bool choiceConvert();
 
 int playerLoop(int* hand) {
 
@@ -18,8 +19,8 @@ int playerLoop(int* hand) {
         cout << endl << "Score: "  << score << endl;
         count=2;
             if (score < 21) {
-                cout << "Would you like to hit? ";
-                cin >> add;
+                cout << "Would you like to hit? y/n: ";
+                add = choiceConvert();
             }
     
     while (add == true && score <= 21) {
@@ -35,9 +36,8 @@ int playerLoop(int* hand) {
             if (score >= 21) {
                 break;
             }
-
-            cout << "Would you like to hit? ";
-            cin >> add;
+            cout << "Would you like to hit? y/n: ";
+            add = choiceConvert();
     }
     return score;
 }

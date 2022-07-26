@@ -9,6 +9,7 @@ extern void boardState(int *deck);
 extern int playerLoop(int* hand); 
 extern int dealerLoop(int* hand);
 extern void winState(int playerScore, int dealerScore);
+extern bool choiceConvert();
 
 int main() {
     int choice;
@@ -41,7 +42,7 @@ int main() {
         winState(playerScore, dealerScore);
 
         cout << "Do you want to keep playing? ";
-        cin>> on;
+        on = choiceConvert();
 
     }
 
