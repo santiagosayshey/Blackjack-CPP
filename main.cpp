@@ -5,7 +5,7 @@ using namespace std;
 
 extern int *shuffleDeck();
 extern int *handDraw(int* deck, int choice);
-extern int cardLoop(int* hand);
+extern int playerComponent(int* hand);
 
 int main() {
 
@@ -18,7 +18,7 @@ int main() {
     // player component
     choice = 1; 
     hand = handDraw(deck, choice);
-    int playerCount = cardLoop(hand);
+    int playerCount = playerComponent(hand);
 
     // dealer component
     choice = 2;

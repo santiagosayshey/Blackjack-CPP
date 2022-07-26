@@ -6,7 +6,7 @@ using namespace std;
 
 extern int scorefinder(int i, int* hand, int score);
 
-int cardLoop(int* hand) {
+int playerComponent(int* hand) {
 
     int score = 0, count = 0, i;
     bool add;
