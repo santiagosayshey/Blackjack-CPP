@@ -15,7 +15,6 @@ int main() {
     int choice;
     int* hand;
     bool on = true;
-    static int win=0, loss=0, tie=0;
 
     while (on == true) {
 
@@ -41,11 +40,11 @@ int main() {
         // win state
         int *stats = winState(playerScore, dealerScore);
 
-        cout << "Do you want to keep playing? WIN";
+        cout << "Do you want to keep playing? ";
         on = choiceConvert();
 
     }
-     
+
     return 0;
 }
 
